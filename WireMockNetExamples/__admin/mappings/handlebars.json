@@ -1,0 +1,21 @@
+{
+    "Guid": "fd8ca21b-db82-48bc-ae5a-fc2153c2b0db",
+    "Request": {
+        "Path": {
+            "Matchers": [
+                {
+                    "Name": "WildcardMatcher",
+                    "Pattern": "/bodyasfile_transform123"
+                }
+            ]
+        },
+        "Methods": [
+            "get"
+        ]
+    },
+    "Response": {
+        "Headers": { "Content-Type": "application/xml" },
+        "BodyAsFile": "MyXmlResponse.xml",
+    	"UseTransformer": true
+    }
+}

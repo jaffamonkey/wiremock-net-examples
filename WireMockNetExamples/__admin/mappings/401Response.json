@@ -1,0 +1,33 @@
+{
+    "Guid": "29971ff8-4adb-4ec7-8b7d-a2ce6e5ca630",
+    "Request": {
+      "Path": {
+        "Matchers": [
+          {
+            "Name": "WildcardMatcher",
+            "Pattern": "/needs-a-key"
+          }
+        ]
+      },
+      "Headers": [
+        {
+          "Name": "api-key",
+          "Matchers": [
+            {
+              "Name": "WildcardMatcher",
+              "Pattern": "*",
+              "IgnoreCase": true,
+              "RejectOnMatch": true
+            }
+          ]
+        }
+      ]
+    },
+    "Response": {
+      "StatusCode": 401,
+      "BodyDestination": "SameAsSource",
+      "Body": "{ \"result\": \"api-key missing\"}",
+      "Headers": {}
+    }
+  }
+  

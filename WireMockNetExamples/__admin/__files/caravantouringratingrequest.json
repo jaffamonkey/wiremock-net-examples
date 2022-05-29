@@ -1,0 +1,55 @@
+{
+    "reference": "xreference",
+    "channelId": "xchannelId",
+    "membershipId": "xmembershipId",
+    "transactionType": "NewBusiness",
+    "onRiskDate": "2019-08-01",
+    "proposer": {
+        "dateOfBirth": "1966-12-12"
+    },
+    "caravan": {
+        "type": "SingleAxle",
+        "make": "Coachman",
+        "yearOfManufacture": 1995,
+        "numberOfBerths": 2,
+        "isSingleOwner": false,
+        "security": {
+            "alarms": [],
+            "devices": [
+                "Hitch Lock With Tamper Device"
+            ],
+            "trackers": [],
+            "wheelLocks": [
+                "Bulldog Max"
+            ]
+        },
+        "storage": {
+            "duration": "Permanent",
+            "type": "Compound - Dedicated Storage",
+            "address": {
+                "line1": "line1",
+                "line2": "line2",
+                "line3": "line3",
+                "line4": "line4",
+                "postCode": "PE24 5TU"
+            }
+        }
+    },
+    "experience": {
+        "caravanClub": null,
+        "caravanCourse": null,
+        "yearsTowing": 5
+    },
+    "claims": {
+        "claimFreeCaravanYears": 2,
+        "claimFreeDrivingYears": 10,
+        "details": []
+    },
+    "cover": {
+        "marketValue": 2000,
+        "newValue": null,
+        "awnings": null,
+        "contents": null,
+        "equipment": 500
+    }
+}

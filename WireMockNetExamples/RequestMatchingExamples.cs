@@ -16,6 +16,7 @@ namespace WireMockNetExamples
         private RestClient client;
 
         private const string BASE_URL = "http://localhost:9876";
+        private const string BASE_URL_LIVE =  "https://mox-referrals.ceta.co.uk";
 
         [OneTimeSetUp]
         public void SetupRestSharpClient()
@@ -33,11 +34,8 @@ namespace WireMockNetExamples
         {
             server.Given(
                 Request.Create().WithPath("/header-matching").UsingGet()
-                // this makes the mock only respond to requests that contain
-                // a 'Content-Type' header with the exact value 'application/json'
                 .WithHeader("Content-Type", new ExactMatcher("application/json"))
-                // this makes the mock only respond to requests that do not contain
-                // the 'ShouldNotBeThere' header
+                // this makes the mock only respond to requests that do not contain the 'ShouldNotBeThere' header
                 .WithHeader("ShouldNotBeThere", ".*", matchBehaviour: MatchBehaviour.RejectOnMatch)
             )
             .RespondWith(
@@ -51,8 +49,7 @@ namespace WireMockNetExamples
         {
             server.Given(
                 Request.Create().WithPath("/request-body-matching").UsingPost()
-                // this makes the mock only respond to requests with a JSON request body
-                // that produces a match for the specified JSON path expression
+                // this makes the mock only respond to requests with a JSON request body that produces a match for the specified JSON path expression
                 .WithBody(new JsonPathMatcher("$.cars[?(@.make == 'Alfa Romeo')]"))
             )
             .RespondWith(

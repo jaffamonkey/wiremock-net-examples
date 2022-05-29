@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "POST",
+    "Path": "/ce-quote-api/quote/get-quote",
+    "bodyFileName": "caravantouringratingrequest.json",
+    "headers": {
+      "Accept": {
+        "contains": "json"
+      }
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "hello.json"
+    }
+  }
+}

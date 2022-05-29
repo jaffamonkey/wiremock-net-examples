@@ -1,0 +1,11 @@
+{
+  "request": {
+    "Path": "/serviceB/.*",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "proxyBaseUrl": "http://localhost:8080",
+    "proxyUrlPrefixToRemove": "/serviceB"
+  }
+}

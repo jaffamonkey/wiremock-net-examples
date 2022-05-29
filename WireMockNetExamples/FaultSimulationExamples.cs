@@ -18,6 +18,7 @@ namespace WireMockNetExamples
         private RestClient client;
 
         private const string BASE_URL = "http://localhost:9876";
+        private const string BASE_URL_LIVE =  "https://mox-referrals.ceta.co.uk";
 
         [OneTimeSetUp]
         public void SetupRestSharpClient()
@@ -28,7 +29,7 @@ namespace WireMockNetExamples
         [SetUp]
         public void StartServer()
         {
-            server = WireMockServer.Start(9876);
+            server = WireMockServer.Start(port: 9876);
         }
 
         private void CreateStubReturningDelayedResponse()
